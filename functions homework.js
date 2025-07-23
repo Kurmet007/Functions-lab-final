@@ -117,6 +117,17 @@ Complete the exercise in the space below:
 
 // console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
 
+function maxOfThree (x,y,z){
+    if ( x >= y && x >= z){
+        return x;
+    } else if (y >= x && y >= z){
+        return y
+    }else{
+        return z;
+    }
+}
+
+console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
 
 /*
 Exercise 7: calculateTip()
@@ -135,7 +146,7 @@ function calculateTip(billAmount, tipPercentage){
 }
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
-//couldnt get it to 10
+
 
 /*
 Exercise 8: convertTemperature()
@@ -158,7 +169,18 @@ Complete the exercise in the space below:
 // console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
 
-/*
+function convertTemperature(temp, scale) {
+  if (scale === 'C') {
+    // Convert Celsius to Fahrenheit
+    return (temp * 9/5) + 32;
+  } else if (scale === 'F') {
+    // Convert Fahrenheit to Celsius
+    return (temp - 32) * 5/9;
+    }
+}
+console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+
+/*  
 Exercise 9: basicCalculator()
 
 Create a function named basicCalculator. 
@@ -173,16 +195,35 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 
 Complete the exercise in the space below:
 */
-// function basicCalculator(n1, n2, asmd){
-//      if (asmd === 'add'){
-//         return n1 + n2;
-//      }else (asmd === 'subtract') {
-//         return n1 - n2;
-//      }else (asmd === "multiply") {
-//         return n1 * n2;
-//      }else (asmd === 'divide') {
-//         return n1 / n2;
-//      }
-//     }
-// console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+function basicCalculator(n1, n2, asmd){
+     if (asmd === 'add'){
+        return n1 + n2;
+     }else if(asmd === 'subtract') {
+        return n1 - n2;
+     }else if(asmd === "multiply") {
+        return n1 * n2;
+     }else if(asmd === 'divide') {
+        return n1 / n2;
+     }
+    }
+
+ 
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 // //i tried so hard on this one 
+
+
+// extra exercises
+//exersize 10
+
+const calculateGrade = (score) => 
+    score >= 90 ? 'A':
+    score >= 80 ? 'B':
+    score >= 70 ? 'C':
+    score >= 60 ? 'D': 'F';
+console.log('Exercise 10 Result:', calculateGrade(85));
+
+
+
+//exercise 11
+
+//exerscise 12
